@@ -1,0 +1,182 @@
+:host {
+  --primcolor :#20A4A0;
+  --pCol:#20A4A0;
+  --pCo2:#F0F0F0;
+  background-color: #FFFFFF;
+
+}
+.background1 {
+  background-color: #F0F0F0;
+}
+.results {
+    display: grid;
+    column-gap: 14px;
+    row-gap: 14px;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 400px));
+    margin-top: 50px;
+    justify-content: space-around;
+  }
+  
+  input[type="text"] {
+    border: solid 1px var(--primary-color);
+    padding: 10px;
+    border-radius: 8px;
+    margin-right: 4px;
+    display: inline-block;
+    width: 30%;
+  }
+  
+  button {
+    padding: 10px;
+    border: solid 1px var(--primary-color);
+    background: var(--primary-color);
+    color: white;
+    border-radius: 8px;
+  }
+  /* card slider */
+.cardHolder{
+  position: relative;
+  width: 100%;
+}
+.card {
+  /* width: 200px; */
+  --bs-card-spacer-y: 0rem;
+  background-color: #F0F0F0;
+  border-radius: 20px;
+  
+
+}
+.card-img-top {
+  border-radius: 30px;
+  padding: 2px;
+  height: 100px;
+  align-self: center;
+  margin-top: 3px;
+  object-fit: cover;
+
+  
+}
+.instructorDiv {
+  margin-top: 5px;
+  width: 105px;
+  position: absolute;
+  border-radius: inherit;
+  background-color: #ffffff;
+  z-index: 10;
+  --bs-gutter-x: 3.5rem;
+  flex-wrap: nowrap;
+  margin: 0;
+  top: 35%;
+
+
+
+}
+.instructorImg{
+  width: 30px;
+  height: 20px;
+  border-radius: 50%;
+  margin-left: 5px;
+  
+  padding: 0;
+}
+.instructorImg img {
+  width: inherit;
+}
+.instructorName {
+  padding-top: 5px;
+  padding-left: 5%;
+  padding-right: 5%;
+  font-size: 11px;
+}
+.ccb{
+  width: fit-content;
+height: inherit;
+background-color: #666161fc!important;
+}
+.scrollContainer {
+  
+  display: flex;
+  flex-wrap:wrap;
+}
+
+.slideLeft ,.slideRight {
+  position: absolute;
+  width: auto;
+  font-size: 1.5rem;
+  
+}
+button.slideLeft
+{
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  background-color: gray;
+  z-index: 111;
+
+
+}
+button.slideRight {
+  position: absolute;
+  right: -10px;
+  top: 50%;
+  background-color: gray;
+  z-index: 111;
+}
+button.left:hover ,button.right:hover {
+  background-color: #666161fc!important;
+}
+
+
+
+
+.cardcontainer{
+  scrollbar-width: none;
+}
+.catcard {
+  margin-left: 1rem;
+  border: 0px;
+  align-items: center;
+  justify-content: center;
+}
+.catcard button i {
+  color: black;
+  font-weight: bold;
+}
+.catcard button{
+  color: black;
+}
+.courseImg {
+  height: 205px;
+  object-fit: cover;
+  width: 100%;
+}
+.progress-bar {
+  background-color: var(--pCo1);
+}
+.btn-enroll{
+  float: right;
+  margin-bottom: 9px;
+}
+.ovbtn, .btn-enroll {
+  background-color: var(--pCol);
+  color: rgb(234, 234, 234);
+}
+
+  @media (min-width: 500px) and (max-width: 768px) {
+    .results {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    input[type="text"] {
+        width: 70%;
+    }   
+  }
+  
+  @media (max-width: 499px) {
+    .results {
+        grid-template-columns: 1fr;
+    }    
+  }
+  .home {
+    margin-top: 50px;
+    width: 100%;
+}

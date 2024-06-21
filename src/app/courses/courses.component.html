@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row my-5 me-3">
+        <a  class="goback"><p routerLink="/Home"><--  Go Back To Home</p></a>
+    </div>
+</div>
+
+<div class="br my-5 w-100 border-1 "></div>
+<!--Start of search bar-->
+
+<!--End of search bar-->
+<div class="container">
+    <div class="row">
+      <div class="col  mb-5" *ngFor="let course of Courses">
+        <div class="card" style="width: 18rem;height: 24rem;">
+            <div class="card-top-img card-img-top"><img [src]='course.img'style=""class="courseimg" alt="..." ></div>
+          <div class="card-body">
+            <h3 class="card-title">{{course.name}}</h3>
+            <ul>
+                <li><i class="fas fa-star"></i></li>
+                <li><i class="fas fa-star"></i></li>
+                <li><i class="fas fa-star"></i></li>
+                <li><i class="fas fa-star"></i></li>
+                <li><i class="fas fa-star-half-alt"></i></li> 
+            </ul>
+            <p class="card-text">{{course.description}}</p>
+            <a routerLink="/overview/{{course.id}}" routerLinkActive="mat-accent" class="btn btn-primary btn-enroll">Enroll</a>
+          </div>
+        </div>
+      </div>

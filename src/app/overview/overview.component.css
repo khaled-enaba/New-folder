@@ -1,0 +1,209 @@
+* {
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+font-family: sans-serif;
+}
+
+:root {
+--primary: #11ab9e;
+--white: #ffffff;
+--black: #030303;
+--text: #555;
+--transition: 0.3s;
+}
+
+body {
+min-height: 100vh;
+overflow-x: hidden;
+}
+
+section section {
+/* position: absolute;
+top: 0;
+left: 0; */
+width: 45%;
+height: fit-content;
+background-color: #ffff;
+}
+
+section .profile img {
+width: 70px;
+height: 60px;
+border-radius: 50%;
+outline: 1px solid #111;
+padding: 4px;
+}
+
+section section .video video {
+position: relative;
+left: 5%;
+border: 2px solid #0cd09f;
+height: 100%;
+top: 20px;
+border-radius: 15px;
+margin-bottom: 30px;
+}
+
+section .container section {
+padding: 25px;
+position: absolute;
+left: 75px;
+top: -40px;
+}
+section section .text h2 {
+position: relative;
+left: 25px;
+font-size: 25px;
+font-weight: normal;
+margin-bottom: 15px;
+color: #111;
+}
+section section .text .profile {
+display: flex;
+justify-content: start;
+align-items: center;
+margin-left: 25px;
+margin-bottom: 10px;
+gap: 15px;
+width: 200px;
+height: 50px;
+padding: 10px;
+background: #fff;
+border-radius: 35px;
+box-shadow: 3px 3px 4px -4px;
+}
+section section .text .profile p {
+font-size: 18px;
+color: #111;
+position: relative;
+left: -5px;
+}
+section section .text .data {
+margin: 15px 0;
+position: relative;
+left: 25px;
+display: flex;
+flex-direction: column;
+}
+section section .text .data i {
+font-size: 20px;
+color: #111;
+}
+section section .text .data p {
+position: relative;
+left: 25px;
+top: -18px;
+font-size: 16px;
+font-weight: 600;
+color: #111;
+margin-left: 5px;
+}
+section section .text > p {
+position: relative;
+left: 25px;
+font-size: 17px;
+color: #444;
+line-height: 1.2;
+}
+section section .text .btn {
+position: relative;
+display: flex;
+gap: 10px;
+left: 45px;
+margin-bottom: 50px;
+margin: 20px 0;
+}
+section section .text .btn button {
+width: 250px;
+position: relative;
+left: -25px;
+height: 35px;
+border-radius: 35px;
+border: 1px solid #0fc2bc;
+background-color: #0fc2bc;
+color: var(--white);
+font-size: 16px;
+cursor: pointer;
+transition: 0.3s;
+}
+section section .text .btn button:hover {
+background-color: transparent;
+color: var(--black);
+}
+
+/* Part Right */
+.firstcol {
+position: absolute;
+right: 0;
+top: 0;
+background-color: #e2e2e2;
+width: 50%;
+box-shadow: -2px -2px 10px -5px #222;
+}
+.firstcol .title h1 {
+font-size: 25px;
+font-weight: normal;
+position: relative;
+margin-bottom: 40px;
+left: 20px;
+top: 20px;
+}
+.firstcol .section {
+background-color: #fff;
+padding: 20px;
+width: 90%;
+position: relative;
+left: 5%;
+border-radius: 12px;
+transition: 0.5s;
+margin-bottom: 10px;
+}
+.firstcol .section ol i {
+position: absolute;
+right: 20px;
+cursor: pointer;
+font-size: 18px;
+}
+.firstcol .section ol h3 {
+font-size: 18px;
+font-weight: normal;
+}
+.firstcol .Description .section ol li {
+font-size: 16px;
+font-weight: 600;
+margin-left: 10px;
+color: #111;
+}
+.firstcol .Description .section ol p {
+font-size: 15px;
+font-weight: normal;
+margin-left: 15px;
+color: #333;
+}
+.lessons {
+display: none;
+margin-left: 15px;
+}
+.sectionTitle h3 {
+transition: 0.2s;
+}
+.sectionTitle:hover h3 {
+color: #0cd09f;
+}
+
+/* Media Query */
+@media screen and (max-width: 768px) {
+section .container .part-right {
+    position: absolute;
+    left: 125px;
+    top: 118%;
+    max-width: 100%;
+    width: 80%;
+    box-shadow: 2px 2px 10px -5px #222;
+    background-color: #f1f1f1;
+}
+section .container .part-left section {
+    max-width: 100%;
+    width: 90%;
+}}

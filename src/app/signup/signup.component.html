@@ -1,0 +1,97 @@
+<div class="container">
+  <form 
+  
+   (ngSubmit)="onSubmit()">
+    <mat-stepper linear #stepper>
+        <!--First Step-->
+        <mat-step [stepControl]="firstFormGroup">
+          <h3>Sign Up As A part of our family</h3>
+          <form [formGroup]="firstFormGroup" #userlogin (ngSubmit)="onNext()">
+            <ng-template matStepLabel>Fill out your name</ng-template>
+            
+            <mat-form-field class="my-2">
+              <mat-label>User Name</mat-label>
+              <input matInput placeholder="First name , Last Name" formControlName="username">
+              <mat-error *ngIf="firstFormGroup.get('username')?.invalid && (firstFormGroup.get('username')?.dirty || firstFormGroup.get('username')?.touched)">
+                User Name is required
+              </mat-error>
+            </mat-form-field>
+            
+            <mat-form-field class="my-2">
+              <mat-label>Enter your email</mat-label>
+              <input matInput placeholder="pat@example.com" type="email" formControlName="email" (blur)="updateErrorMessage()">
+              <mat-error *ngIf="firstFormGroup.get('email')?.invalid && (firstFormGroup.get('email')?.dirty || firstFormGroup.get('email')?.touched)">
+                <span *ngIf="firstFormGroup.get('email')?.hasError('required')">Email is required</span>
+                <span *ngIf="firstFormGroup.get('email')?.hasError('email')">Invalid email format</span>
+              </mat-error>
+            </mat-form-field>
+            <mat-form-field class="m-2">
+              <mat-label>Enter your password</mat-label>
+              <input #input matInput [type]="hide ? 'password' : 'text'" formControlName="Password" required>
+              <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+              </button>
+              <mat-hint align="start">
+                {{input.value?.length || 0}}/25
+              </mat-hint>
+            </mat-form-field>
+            
+            <div>
+              <button mat-button type="submit" matStepperNext [disabled]="!firstFormGroup.valid">Next</button>
+            </div>
+          </form>
+        </mat-step>
+        
+     
+        
+        <!-- Third Step -->
+        <mat-step [stepControl]="thirdFormGroup" label="Fill out your address">
+          <form [formGroup]="thirdFormGroup">
+            <div class="row" cols="2" rowHeight="1:1">
+              <mat-form-field class="m-2 col">
+              <mat-label>Birthdate</mat-label>
+              <input matInput   [matDatepicker]="picker" required>
+              <mat-hint>MM/DD/YYYY</mat-hint>
+              <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+            <mat-form-field class="m-2 col"> 
+              <ngx-mat-intl-tel-input
+                  [preferredCountries]="['us', 'gb']"
+                  [enablePlaceholder]="true"
+                  [enableSearch]="true"
+                  describedBy="phoneInput"
+                  [formControl]="phone"
+                  formControlName="thirdCtrl"
+                ></ngx-mat-intl-tel-input>
+            </mat-form-field>
+            
+          </div>
+            <div class="row">
+              <mat-radio-group formControlName="thirdCtrl" aria-label="Select an option" required class="m-2">
+                <mat-radio-button value="male">Male</mat-radio-button>
+                <mat-radio-button value="female">Female</mat-radio-button>
+              </mat-radio-group>
+              
+            
+            
+          </div>
+            <div>
+              <button mat-button matStepperPrevious>Back</button>
+              <button mat-button matStepperNext type="submit" >Next</button>
+            </div>
+          </form>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>Done</ng-template>
+          <p>You are now done.</p>
+          <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <!-- <button mat-button (click)="stepper.reset()">Reset</button> -->
+            <button mat-button matStepperNext type="submit" (click)="onSubmit()" >Finish</button>
+
+          </div>
+        </mat-step>
+      </mat-stepper>
+</form>
+</div>

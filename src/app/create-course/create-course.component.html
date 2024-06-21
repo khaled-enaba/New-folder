@@ -1,0 +1,18 @@
+<form [formGroup]="courseForm" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+      <mat-label>Username</mat-label>
+      <input matInput formControlName="title" placeholder="Enter your username">
+      <mat-error *ngIf="courseForm.get('title')?.invalid && (courseForm.get('title')?.dirty || courseForm.get('title')?.touched)">
+        <span *ngIf="courseForm.get('title')?.errors?.required">Username is required</span>
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Discription</mat-label>
+        <input matInput formControlName="description" placeholder="Enter your description">
+        <mat-error *ngIf="courseForm.get('description')?.invalid && (courseForm.get('description')?.dirty || courseForm.get('description')?.touched)">
+          <span *ngIf="courseForm.get('description')?.errors?.required">Username is required</span>
+        </mat-error>
+      </mat-form-field>
+  
+    <button mat-raised-button color="primary" type="submit">Submit</button>
+  </form>

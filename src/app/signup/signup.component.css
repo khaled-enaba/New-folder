@@ -1,0 +1,14 @@
+.container {
+    border: 1px solid #646363;
+    border-radius: 20px;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    box-shadow: 10px 10px 50px 11px #616161;
+    background-image:  url(../../assets/images/logo.png);
+    background-size: 25%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.mat-stepper-horizontal {
+    background: #fafafa75;
+}

@@ -1,0 +1,35 @@
+:host {
+    --primcolor :#20A4A0;
+    --pCol:#20A4A0;
+    --pCo2:#F0F0F0;
+    background-color: #FFFFFF;
+
+}
+.roombtn {
+	box-shadow:inset -2px 17px 0px -5px #20aaa5;
+	background:linear-gradient(to bottom, #20aaa5 5%, #3a807c 100%);
+	background-color:#20aaa5;
+	border-radius:42px;
+	border:1px solid #20aaa5;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Courier New;
+	font-size:17px;
+	font-weight:bold;
+	padding:25px 15px;
+	text-decoration:none;
+	text-shadow:0px 5px 6px #208682;
+    position: fixed;
+    right: 100px;
+    bottom: 100px;
+    z-index: 1;
+}
+.roombtn:hover {
+	background:linear-gradient(to bottom, #3a807c 5%, #20aaa5 100%);
+	background-color:#3a807c;
+}
+.roombtn:active {
+	position:relative;
+	top:1px;
+}
